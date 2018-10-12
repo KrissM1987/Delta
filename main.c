@@ -5,7 +5,7 @@ int main()
 
 {
 int a,b,c;
-float delta, x1 , x2, pdelta ;
+float delta, x1 , x2; //pdelta ;
 
 printf ("podaj 1 liczbę : \n");
 scanf("%i", &a);
@@ -19,9 +19,10 @@ printf ("Delta wynosi : %.2f\n", delta);
 
 if (delta >0)
 {
-    pdelta = sqrt(delta);
-    x1=(-b+ pdelta)/2*a;
-    x2=(-b-pdelta)/2*a;
+    //pdelta = sqrt(delta);
+    x1=(-b+(sqrt(delta)))/(2*a);
+    x2=((-b)-sqrt(delta))/(2*a);
+
     printf ("Delta jest dodatnia jej wartości to: %.2f oraz : %.2f ", x1, x2);
 
 }
@@ -31,6 +32,7 @@ else if (delta == 0)
     printf ("Delta ma wartosc 0, rozwiazanie to: %.2f\n",x1);
 
 } else
+    printf ("Delta ma wartosc ujemna, brak rozwiazan");
 
 
 
